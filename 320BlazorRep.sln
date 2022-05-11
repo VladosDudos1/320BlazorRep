@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schedule", "Schedule\Schedule.csproj", "{3CCA1F64-BBA8-484C-A6B3-BF361F0555EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTable", "TimeTable\TimeTable.csproj", "{57DAF40D-9BD9-4B67-B239-F75C873992F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3CCA1F64-BBA8-484C-A6B3-BF361F0555EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CCA1F64-BBA8-484C-A6B3-BF361F0555EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CCA1F64-BBA8-484C-A6B3-BF361F0555EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CCA1F64-BBA8-484C-A6B3-BF361F0555EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57DAF40D-9BD9-4B67-B239-F75C873992F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57DAF40D-9BD9-4B67-B239-F75C873992F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57DAF40D-9BD9-4B67-B239-F75C873992F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57DAF40D-9BD9-4B67-B239-F75C873992F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
