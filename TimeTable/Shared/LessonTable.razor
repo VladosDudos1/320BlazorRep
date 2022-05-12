@@ -1,0 +1,16 @@
+﻿@using TimeTable;
+<h3>LessonTable</h3>
+
+@foreach (var subject in Day.Subjects)
+{
+    <p>@subject.Name</p>
+}
+
+
+
+
+@code {
+    [Parameter]
+    public TimeTableDay Day { get; set; }
+
+}

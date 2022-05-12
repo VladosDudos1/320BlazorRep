@@ -1,0 +1,17 @@
+﻿@page "/timetable"
+
+@using TimeTable.Shared
+
+<h3>TimeTablePage</h3>
+
+<select id="selectDay">
+    @foreach (var day in DataAccess.GetDays())
+    <option>@day</option>
+</selec>
+
+
+<LessonTable Day=@selectedDay/>
+@code {
+    TimeTableDay selectedDay;
+    selectedDay = DataAccess.GetTimeTableDay(/*selected day*/);
+}

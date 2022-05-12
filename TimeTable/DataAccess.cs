@@ -14,6 +14,10 @@ namespace TimeTable
             var timeTable = (MongoCollectionBase<TimeTableDay>)database.GetCollection<TimeTableDay>("TimeTable");
             return timeTable.Find(x => true).ToList();
         }
+        public static List<string> GetDays()
+        {
+            return GetTimeTable().Select(x => x.DayName).ToList();
+        }
 
         public static void SaveTimeTableDay(TimeTableDay day)
         {
@@ -26,5 +30,10 @@ namespace TimeTable
             else
                 timeTable.InsertOneAsync(day);
         }
+        public static TimeTableDay GetTimeTableDay(string day)
+        {
+            return GetTimeTable().FirstOrDefault(x => x.DayName == day);
+        }
+
     }
 }
