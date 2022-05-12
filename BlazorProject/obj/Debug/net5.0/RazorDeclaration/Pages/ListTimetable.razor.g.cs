@@ -76,13 +76,20 @@ using BlazorProject;
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\_Imports.razor"
+#line 1 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
+using BlazorProject.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
 using BlazorProject.Shared;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/listtimetable")]
     public partial class ListTimetable : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,6 +97,20 @@ using BlazorProject.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 33 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
+       
+    private List<Timetable> timetable = new List<Timetable>();
+
+    private async void GetTimetableInDay(string day)
+    {
+        timetable = await TimetabService.GetItem(day);
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private TimetableService TimetabService { get; set; }
     }
 }
 #pragma warning restore 1591

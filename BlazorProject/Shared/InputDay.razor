@@ -1,40 +1,22 @@
 ﻿@using BlazorProject.Data
-@using BlazorProject.Shared
-@page "/listtimetable"
-
 @inject TimetableService TimetabService
-<h2>Timetable</h2>
-
-<InputDay OnClickCallback="@GetTimetableInDay" />
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Subject</th>
-            <th>Teacher</th>
-            <th>Classroom</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (timetable != null)
-        {
-            @foreach (var table in timetable)
+<div class="container-fluid"
+    <div>
+        @*<select @bind="@day">
+            <option selected="selected">  </option>
+            @foreach (var i in TimetabService.GetDay().ToList())
             {
-                <tr>
-                    <td>@table.Id</td>
-                    <td>@table.Subject</td>
-                    <td>@table.NameTeacher</td>
-                    <td>@table.Classroom</td>
-                </tr>
+                <option value="@day">@i</option>
             }
-        }
-    </tbody>
-</table>
-@code {
-    private List<Timetable> timetable = new List<Timetable>();
+        </select>*@
+        <input type="text" @bind-value="@day"/>
+        <button @onclick="@(() => OnClickCallback.InvokeAsync(day))">Get</button>
+    </div>
+</div>
 
-    private async void GetTimetableInDay(string day)
-    {
-        timetable = await TimetabService.GetItem(day);
-    }
+@code {
+    private string day;
+
+    [Parameter]
+    public EventCallback<string> OnClickCallback { get; set; }
 }

@@ -82,6 +82,13 @@ using BlazorProject.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\InputDay.razor"
+using BlazorProject.Data;
+
+#line default
+#line hidden
+#nullable disable
     public partial class InputDay : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +96,18 @@ using BlazorProject.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 17 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\InputDay.razor"
+       
+    private string day;
+
+    [Parameter]
+    public EventCallback<string> OnClickCallback { get; set; }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private TimetableService TimetabService { get; set; }
     }
 }
 #pragma warning restore 1591
