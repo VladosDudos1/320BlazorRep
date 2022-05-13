@@ -98,19 +98,18 @@ using BlazorProject.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
+#line 31 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
        
     private List<Timetable> timetable = new List<Timetable>();
 
     private async void GetTimetableInDay(string day)
     {
-        timetable = await TimetabService.GetItem(day);
+        timetable = await TimetableService.GetItem(day);
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private TimetableService TimetabService { get; set; }
     }
 }
 #pragma warning restore 1591

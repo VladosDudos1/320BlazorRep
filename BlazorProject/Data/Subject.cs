@@ -7,13 +7,13 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace BlazorProject.Data
 {
-    public class Timetable
+    public class Subject
     {
         [BsonId]
         [BsonIgnoreIfDefault]
-        public ObjectId Id { get; set; }
-        public string NameTeacher { get; set; }
-        public string Subject { get; set; }
-        public string Classroom { get; set; }
+        private ObjectId _id { get; set; }
+        public ObjectId Id { get { return _id; } }
+        public string Name { get; set; }
+        public string Teacher { get; set; }
     }
 }

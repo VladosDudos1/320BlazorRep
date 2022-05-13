@@ -107,7 +107,6 @@ using BlazorProject.Data;
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private TimetableService TimetabService { get; set; }
     }
 }
 #pragma warning restore 1591

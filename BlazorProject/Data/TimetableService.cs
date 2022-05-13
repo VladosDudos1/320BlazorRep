@@ -8,14 +8,14 @@ namespace BlazorProject.Data
 {
     public class TimetableService
     {
-        public List<string> GetDay()
+        public static List<string> GetDay()
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Timetable");
             return database.ListCollectionNames().ToList();
         }
 
-        public async Task<List<Timetable>> GetItem(string searchDay)
+        public static async Task<List<Timetable>> GetItem(string searchDay)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Timetable");

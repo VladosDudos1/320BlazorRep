@@ -1,8 +1,6 @@
 ﻿@using BlazorProject.Data
 @using BlazorProject.Shared
 @page "/listtimetable"
-
-@inject TimetableService TimetabService
 <h2>Timetable</h2>
 
 <InputDay OnClickCallback="@GetTimetableInDay" />
@@ -35,6 +33,6 @@
 
     private async void GetTimetableInDay(string day)
     {
-        timetable = await TimetabService.GetItem(day);
+        timetable = await TimetableService.GetItem(day);
     }
 }
