@@ -1,0 +1,17 @@
+﻿@using BlazorProject.Data
+@page "/listtimetable2"
+
+<h3>Timetable</h3>
+
+<select id="selectDay" @bind="@selectedDay">
+    @foreach (var day in TimetableService.GetDay())
+    {
+        <option>@day</option>
+    }
+</select>
+
+<ListTimetable2 Day=@selectedDay />
+
+@code {
+    string selectedDay = "Monday";
+}

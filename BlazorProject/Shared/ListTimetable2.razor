@@ -1,9 +1,5 @@
 ﻿@using BlazorProject.Data
-@using BlazorProject.Shared
-@page "/listtimetable"
-<h2>Timetable</h2>
 
-<InputDay OnClickCallback="@GetTimetableInDay" />
 <table class="table">
     <thead>
         <tr>
@@ -14,9 +10,9 @@
         </tr>
     </thead>
     <tbody>
-        @if (timetable != null)
+        @if (TimetableService.GetItem(Day) != null)
         {
-            @foreach (var table in timetable)
+            @foreach (var table in TimetableService.GetItem(Day))
             {
                 <tr>
                     <td>@table.Id</td>
@@ -28,11 +24,8 @@
         }
     </tbody>
 </table>
-@code {
-    private List<Timetable> timetable = new List<Timetable>();
 
-    private async void GetTimetableInDay(string day)
-    {
-        timetable = await TimetableService.GetItemAsync(day);
-    }
+@code {
+    [Parameter]
+    public string Day { get; set; } = "Monday";
 }

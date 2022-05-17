@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorProject.Pages
+namespace BlazorProject.Shared
 {
     #line hidden
     using System;
@@ -76,21 +76,20 @@ using BlazorProject;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
-using BlazorProject.Data;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 2 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
+#line 10 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\_Imports.razor"
 using BlazorProject.Shared;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/listtimetable")]
-    public partial class ListTimetable : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 1 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\ListTimetable2.razor"
+using BlazorProject.Data;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class ListTimetable2 : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,14 +97,10 @@ using BlazorProject.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
+#line 28 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\ListTimetable2.razor"
        
-    private List<Timetable> timetable = new List<Timetable>();
-
-    private async void GetTimetableInDay(string day)
-    {
-        timetable = await TimetableService.GetItemAsync(day);
-    }
+    [Parameter]
+    public string Day { get; set; } = "Monday";
 
 #line default
 #line hidden

@@ -76,21 +76,21 @@ using BlazorProject;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
+#line 1 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\InputDay.razor"
 using BlazorProject.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
+#line 2 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\InputDay.razor"
 using BlazorProject.Shared;
 
 #line default
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/listtimetable")]
-    public partial class ListTimetable : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class InputDay : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,13 +98,13 @@ using BlazorProject.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
+#line 31 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\InputDay.razor"
        
     private List<Timetable> timetable = new List<Timetable>();
 
     private async void GetTimetableInDay(string day)
     {
-        timetable = await TimetableService.GetItemAsync(day);
+        timetable = await TimetableService.GetItem(day);
     }
 
 #line default
