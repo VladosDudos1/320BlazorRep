@@ -9,7 +9,6 @@ C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Schedule.
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\App.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Counter.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Error.razor.g.cs
-C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\NavMenu.razor.g.cs
@@ -135,7 +134,6 @@ C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDecl
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\App.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\Counter.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\Error.razor.g.cs
-C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\FetchData.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\Index.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\LessonTable.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs
@@ -146,3 +144,5 @@ C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Schedule.
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Schedule.pdb
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\SchedulePage.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\SchedulePage.razor.g.cs
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\InputDay.razor.g.cs
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\InputDay.razor.g.cs

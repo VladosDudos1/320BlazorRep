@@ -1,16 +1,39 @@
 ﻿@page "/schedule"
+@using Schedule.Data;
+@inject Services.ScheduleService ScheduleService
 
-<h1>Counter</h1>
+<InputDay OnClickCallback="@GetScheduleDay"/>
 
-<p>Current count: @currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Classroom</th>
+            <th>Name</th>
+            <th>Teacher</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Day != null)
+        {
+            @foreach (var subject in Day.Subjects)
+            {
+                <tr>
+                    <td>@subject.Classroom</td>
+                    <td>@subject.Name</td>
+                    <td>@subject.Teacher</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
 
 @code {
-    private int currentCount = 0;
 
-    private void IncrementCount()
+    private ScheduleDay Day;
+
+    private void GetScheduleDay(string selectedDay)
     {
-        currentCount++;
+        Day = ScheduleService.GetTimeTableDay(selectedDay);
     }
 }

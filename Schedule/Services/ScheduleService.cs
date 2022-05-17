@@ -12,17 +12,18 @@ namespace Schedule.Services
         public static MongoClient client = new MongoClient("mongodb://localhost");
         public static MongoDatabaseBase database = (MongoDatabaseBase)client.GetDatabase("Schedule");
 
-        public static List<ScheduleDay> GetSchedule()
+        public List<ScheduleDay> GetSchedule()
         {
             var schedule = (MongoCollectionBase<ScheduleDay>)database.GetCollection<ScheduleDay>("Schedule");
             return schedule.Find(x => true).ToList();
         }
-        public static List<string> GetDays()
+
+        public List<string> GetDays()
         {
-            return GetSchedule().Select(x => x.DayName).ToList();
+            return Enumerable.Range(0, 7).Select(i => ((DayOfWeek)i).ToString()).ToList();
         }
 
-        public static void SaveTimeTableDay(ScheduleDay day)
+        public void SaveTimeTableDay(ScheduleDay day)
         {
             var timeTable = (MongoCollectionBase<ScheduleDay>)database.GetCollection<ScheduleDay>("Schedule");
             if (GetSchedule().FirstOrDefault(x => x.Id == day.Id) != null)
@@ -33,7 +34,7 @@ namespace Schedule.Services
             else
                 timeTable.InsertOneAsync(day);
         }
-        public static ScheduleDay GetTimeTableDay(string day)
+        public ScheduleDay GetTimeTableDay(string day)
         {
             return GetSchedule().FirstOrDefault(x => x.DayName == day);
         }
