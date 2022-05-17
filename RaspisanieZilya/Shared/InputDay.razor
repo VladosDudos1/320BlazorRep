@@ -1,0 +1,29 @@
+﻿@using RaspisanieZilya.Data
+@*@inject TimetableService TimetabService*@
+<div class="container-fluid"
+    <div>
+        <select @bind="@day">
+            <option selected="selected">  </option>
+            @foreach (var i in RaspisanieService.GetDay().ToList())
+            {
+                <option>@i</option>
+            }
+        </select>
+        @*<input type="text" @bind-value="@day"/>*@
+        @*<button @onclick="@(() => OnClickCallback.InvokeAsync(day))">Get</button>*@
+
+        
+    </div>
+</div>
+
+@code {
+    private string day = "Friday";
+
+    public List<Raspisanie> GetTable()
+    {
+        return RaspisanieService.GetItem(day);
+    }
+
+    [Parameter]
+    public EventCallback<string> OnClickCallback { get; set; }
+}

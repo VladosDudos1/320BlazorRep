@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\201922\\source\\repos\\RaspisanieZilya\\RaspisanieZilya\\RaspisanieZilya.csproj": {}
+    "C:\\Users\\201922\\Source\\Repos\\VladosDudos1\\320BlazorRep\\RaspisanieZilya\\RaspisanieZilya.csproj": {}
   },
   "projects": {
-    "C:\\Users\\201922\\source\\repos\\RaspisanieZilya\\RaspisanieZilya\\RaspisanieZilya.csproj": {
+    "C:\\Users\\201922\\Source\\Repos\\VladosDudos1\\320BlazorRep\\RaspisanieZilya\\RaspisanieZilya.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\201922\\source\\repos\\RaspisanieZilya\\RaspisanieZilya\\RaspisanieZilya.csproj",
+        "projectUniqueName": "C:\\Users\\201922\\Source\\Repos\\VladosDudos1\\320BlazorRep\\RaspisanieZilya\\RaspisanieZilya.csproj",
         "projectName": "RaspisanieZilya",
-        "projectPath": "C:\\Users\\201922\\source\\repos\\RaspisanieZilya\\RaspisanieZilya\\RaspisanieZilya.csproj",
+        "projectPath": "C:\\Users\\201922\\Source\\Repos\\VladosDudos1\\320BlazorRep\\RaspisanieZilya\\RaspisanieZilya.csproj",
         "packagesPath": "C:\\Users\\201922\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\201922\\source\\repos\\RaspisanieZilya\\RaspisanieZilya\\obj\\",
+        "outputPath": "C:\\Users\\201922\\Source\\Repos\\VladosDudos1\\320BlazorRep\\RaspisanieZilya\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -43,6 +43,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.15.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.15.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

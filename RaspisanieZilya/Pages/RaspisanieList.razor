@@ -1,0 +1,51 @@
+﻿@using RaspisanieZilya.Data
+@using RaspisanieZilya.Shared
+@page "/listtimetable"
+<h2>Timetable</h2>
+
+@*<InputDay OnClickCallback="@GetTimetableInDay" />*@
+<select @bind="@day">
+    <option selected="selected">  </option>
+    @foreach (var i in RaspisanieService.GetDay().ToList())
+    {
+        <option>@i</option>
+    }
+</select>
+<button @onclick="GetTimetableInDay">Get</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Teacher</th>
+            <th>Classroom</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (timetable != null)
+        {
+            @foreach (var item in timetable)
+            {
+        <tr>
+            <td>
+                @item.Subject
+            </td>
+            <td>
+                @item.Teacher
+            </td>
+            <td>
+                @item.Classroom
+            </td>
+        </tr>
+            }
+            }
+    </tbody>
+</table>
+@code {
+    private string day = "Friday";
+    private List<Raspisanie> timetable = new List<Raspisanie>();
+
+    private void GetTimetableInDay()
+    {
+        timetable = RaspisanieService.GetItem(day);
+    }
+}
