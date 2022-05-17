@@ -84,9 +84,29 @@ using TimeTable.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 16 "D:\Users\gutuf\source\repos\320BlazorRep\TimeTable\Pages\TimeTablePage.razor"
+#line 21 "D:\Users\gutuf\source\repos\320BlazorRep\TimeTable\Pages\TimeTablePage.razor"
        
-    TimeTableDay selectedDay = DataAccess.GetTimeTableDay("Today");
+    string selectedDay = "Monday";
+
+
+
+    public void AddDay()
+    {
+        
+
+        DataAccess.SaveTimeTableDay(new TimeTableDay
+        {
+            DayName = "Sunday",
+            Subjects =
+            new List<Subject>
+            {
+                    new Subject {Name = "MDK 01 04", Teacher = "Nacharov" },
+                    new Subject {Name = "MDK 01 04", Teacher = "Nacharov" },
+            }
+
+        }
+        );
+    }
 
 #line default
 #line hidden

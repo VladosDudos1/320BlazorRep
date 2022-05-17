@@ -83,10 +83,10 @@ using TimeTable;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "D:\Users\gutuf\source\repos\320BlazorRep\TimeTable\Shared\LessonTable.razor"
+#line 23 "D:\Users\gutuf\source\repos\320BlazorRep\TimeTable\Shared\LessonTable.razor"
        
     [Parameter]
-    public TimeTableDay Day { get; set; }
+    public string Day { get; set; } = "Monday";
 
 
 #line default

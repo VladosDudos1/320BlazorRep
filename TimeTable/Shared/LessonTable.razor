@@ -1,16 +1,27 @@
 ﻿@using TimeTable;
 <h3>LessonTable</h3>
 
-@foreach (var subject in Day.Subjects)
+<table>
+    <thead>
+        <tr>
+            <td>Subject</td>
+            <td>Teacher</td>
+        </tr>
+    </thead>
+@foreach (var subject in DataAccess.GetTimeTableDay(Day).Subjects)
 {
-    <p>@subject.Name</p>
+    <tr>
+        <td>@subject.Name</td>
+        <td>@subject.Teacher</td>
+    
+    </tr>
 }
 
 
-
+</table>
 
 @code {
     [Parameter]
-    public TimeTableDay Day { get; set; }
+    public string Day { get; set; } = "Monday";
 
 }

@@ -12,6 +12,12 @@ namespace TimeTable
         public ObjectId Id { get { return _id; } }
         public string DayName { get; set; }
         public List<Subject> Subjects { get; set; }
+        public TimeTableDay()
+        {
+            DayName = "";
+            Subjects = new List<Subject>();
+
+        }
 
     }
 }
