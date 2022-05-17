@@ -83,7 +83,7 @@ using RaspisanieSofia.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\Admin\source\repos\RaspisanieSofia\RaspisanieSofia\Shared\NavMenu.razor"
+#line 34 "C:\Users\Admin\source\repos\RaspisanieSofia\RaspisanieSofia\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

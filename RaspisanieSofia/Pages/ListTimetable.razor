@@ -1,0 +1,39 @@
+﻿@using RaspisanieSofia.Data
+@using RaspisanieSofia.Shared
+@page "/listtimetable"
+<h2>Timetable</h2>
+
+<InputDay OnClickCallback="@GetTimetableInDay" />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Subject</th>
+            <th>Teacher</th>
+            <th>Classroom</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (timetable != null)
+        {
+            @foreach (var table in timetable)
+            {
+                <tr>
+                    <td>@table.Id</td>
+                    <td>@table.Subject</td>
+                    <td>@table.NameTeacher</td>
+                    <td>@table.Classroom</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@code {
+    private List<Timetable> timetable = new List<Timetable>();
+
+    private async void GetTimetableInDay(string day)
+    {
+        timetable = await TimetableService.GetItem(day);
+
+    }
+}
