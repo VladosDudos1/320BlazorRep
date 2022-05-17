@@ -62,15 +62,15 @@ using Microsoft.JSInterop;
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\Users\gutuf\source\repos\320BlazorRep\TimeTable\_Imports.razor"
-using TimeTable;
+#line 9 "D:\Users\gutuf\source\repos\320BlazorRep\TimeTable\_Imports.razor"
+using TimeTable.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "D:\Users\gutuf\source\repos\320BlazorRep\TimeTable\_Imports.razor"
-using TimeTable.Shared;
+#line 1 "D:\Users\gutuf\source\repos\320BlazorRep\TimeTable\Shared\LessonTable.razor"
+using TimeTable;
 
 #line default
 #line hidden
@@ -82,6 +82,16 @@ using TimeTable.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 12 "D:\Users\gutuf\source\repos\320BlazorRep\TimeTable\Shared\LessonTable.razor"
+       
+    [Parameter]
+    public TimeTableDay Day { get; set; }
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

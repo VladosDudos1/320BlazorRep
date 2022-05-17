@@ -83,6 +83,14 @@ using TimeTable.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 16 "D:\Users\gutuf\source\repos\320BlazorRep\TimeTable\Pages\TimeTablePage.razor"
+       
+    TimeTableDay selectedDay = DataAccess.GetTimeTableDay("Today");
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

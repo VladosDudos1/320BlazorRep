@@ -6,12 +6,13 @@
 
 <select id="selectDay">
     @foreach (var day in DataAccess.GetDays())
-    <option>@day</option>
-</selec>
+    {
+        <option>@day</option>
+    }
+</select>
 
 
 <LessonTable Day=@selectedDay/>
 @code {
-    TimeTableDay selectedDay;
-    selectedDay = DataAccess.GetTimeTableDay(/*selected day*/);
+    TimeTableDay selectedDay = DataAccess.GetTimeTableDay("Today");
 }
