@@ -1,0 +1,27 @@
+﻿@using TimeTable;
+<h3>LessonTable</h3>
+
+<table>
+    <thead>
+        <tr>
+            <td>Subject</td>
+            <td>Teacher</td>
+        </tr>
+    </thead>
+    @foreach (var subject in DataAccess.GetTimeTableDay(Day).Subjects)
+    {
+        <tr>
+            <td>@subject.Name</td>
+            <td>@subject.Teacher</td>
+
+        </tr>
+    }
+
+
+</table>
+
+@code {
+    [Parameter]
+    public string Day { get; set; } = "Monday";
+
+}

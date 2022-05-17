@@ -1,0 +1,40 @@
+﻿@page "/timetable"
+
+@using TimeTable.Shared
+
+<h3>TimeTablePage</h3>
+
+<select id="selectDay" @bind="@selectedDay">
+    @foreach (var day in DataAccess.GetDays())
+    {
+        <option>@day</option>
+    }
+</select>
+
+
+<LessonTable Day=@selectedDay />
+
+
+@code {
+    string selectedDay = "Monday";
+
+
+
+    public void AddDay()
+    {
+
+
+        DataAccess.SaveTimeTableDay(new TimeTableDay
+        {
+            DayName = "Sunday",
+            Subjects =
+            new List<Subject>
+    {
+        new Subject {Name = "MDK 01 04", Teacher = "Nacharov" },
+        new Subject {Name = "MDK 01 04", Teacher = "Nacharov" },
+        }
+
+        }
+    );
+    }
+}
