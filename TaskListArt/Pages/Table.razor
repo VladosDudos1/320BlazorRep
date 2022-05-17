@@ -1,0 +1,36 @@
+﻿@using TaskListArt.Data
+@using TaskListArt.Shared
+@page "/timetable"
+<h3>Table</h3>
+
+<InputDay OnClickCallback="@GetTimetableInDay" />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Object</th>
+            <th>Teacher</th>
+            <th>Classroom</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (tasklist != null)
+        {
+            @foreach (var table in tasklist)
+            {
+                <tr>
+                    <td>@table.Object</td>
+                    <td>@table.Teacher</td>
+                    <td>@table.Classroom</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@code {
+    private List<Tasklist> tasklist = new List<Tasklist>();
+
+    private async void GetTimetableInDay(string day)
+    {
+        tasklist = await TaskListService.GetItem(day);
+    }
+}

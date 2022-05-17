@@ -1,0 +1,22 @@
+﻿@using TaskListArt.Data
+
+<div class="container-fluid"
+    <div>
+        <select @bind="@day">
+            <option selected="selected">  </option>
+            @foreach (var i in TaskListService.GetDay().ToList())
+            {
+                <option>@i</option>
+            }
+        </select>
+
+        <button @onclick="@(() => OnClickCallback.InvokeAsync(day))">Get</button>
+    </div>
+</div>
+
+@code {
+    private string day;
+
+    [Parameter]
+    public EventCallback<string> OnClickCallback { get; set; }
+}
