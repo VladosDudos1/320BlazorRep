@@ -3,7 +3,7 @@
 
 <h3>Timetable</h3>
 
-<select id="selectDay" @bind="@selectedDay">
+<select @bind="@selectedDay">
     @foreach (var day in TimetableService.GetDay())
     {
         <option>@day</option>
@@ -13,5 +13,5 @@
 <ListTimetable2 Day=@selectedDay />
 
 @code {
-    string selectedDay = "Monday";
+    public string selectedDay = "Monday";
 }

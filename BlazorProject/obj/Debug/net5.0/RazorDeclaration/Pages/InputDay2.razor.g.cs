@@ -100,7 +100,7 @@ using BlazorProject.Data;
 #nullable restore
 #line 15 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\InputDay2.razor"
        
-    string selectedDay = "Monday";
+    public string selectedDay = "Monday";
 
 #line default
 #line hidden
