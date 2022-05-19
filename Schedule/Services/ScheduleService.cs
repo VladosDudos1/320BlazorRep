@@ -45,10 +45,14 @@ namespace Schedule.Services
             return GetSchedule().FirstOrDefault(x => x.DayName == day);
         }
 
-        public void AddNewSubject(ScheduleDay day)
+        public Subject AddNewSubject(ScheduleDay day)
         {
-            day.Subjects.Add(new Subject());
+            Subject subject = new Subject();
+
+            day.Subjects.Add(subject);
             SaveScheduleDay(day);
+
+            return subject;
         }
     }
 }

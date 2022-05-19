@@ -4,7 +4,7 @@
         <select @bind="@day" @onclick="@(() => OnClickCallback.InvokeAsync(day))">
             @foreach (var i in ScheduleService.GetDays())
             {
-                <option>@i</option>
+                <option class="dropdown-item">@i</option>
             }
         </select>
     </div>

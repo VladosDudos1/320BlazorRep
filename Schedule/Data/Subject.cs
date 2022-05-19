@@ -11,7 +11,7 @@ namespace Schedule.Data
         public ObjectId Id { get => _id; }
         public string Name { get; set; }
         public string Teacher { get; set; }
-        public int Classroom { get; set; }
+        public int? Classroom { get; set; }
 
         [BsonIgnore]
         public bool IsEditing { get; set; }
