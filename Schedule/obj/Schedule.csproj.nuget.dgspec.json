@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\201906\\source\\repos\\Schedule\\Schedule\\Schedule.csproj": {}
+    "C:\\Users\\danil\\Source\\Repos\\320Blazor\\Schedule\\Schedule.csproj": {}
   },
   "projects": {
-    "C:\\Users\\201906\\source\\repos\\Schedule\\Schedule\\Schedule.csproj": {
+    "C:\\Users\\danil\\Source\\Repos\\320Blazor\\Schedule\\Schedule.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\201906\\source\\repos\\Schedule\\Schedule\\Schedule.csproj",
+        "projectUniqueName": "C:\\Users\\danil\\Source\\Repos\\320Blazor\\Schedule\\Schedule.csproj",
         "projectName": "Schedule",
-        "projectPath": "C:\\Users\\201906\\source\\repos\\Schedule\\Schedule\\Schedule.csproj",
-        "packagesPath": "C:\\Users\\201906\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\201906\\source\\repos\\Schedule\\Schedule\\obj\\",
+        "projectPath": "C:\\Users\\danil\\Source\\Repos\\320Blazor\\Schedule\\Schedule.csproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danil\\Source\\Repos\\320Blazor\\Schedule\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "\\\\nas36d451\\user-domain$\\stud\\201906\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -31,6 +30,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,6 +42,17 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.15.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.15.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
