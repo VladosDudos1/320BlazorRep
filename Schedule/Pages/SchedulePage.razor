@@ -3,30 +3,7 @@
 @inject Services.ScheduleService ScheduleService
 
 <InputDay OnClickCallback="@GetScheduleDay"/>
-
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Classroom</th>
-            <th>Name</th>
-            <th>Teacher</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Day != null)
-        {
-            @foreach (var subject in Day.Subjects)
-            {
-                <tr>
-                    <td>@subject.Classroom</td>
-                    <td>@subject.Name</td>
-                    <td>@subject.Teacher</td>
-                </tr>
-            }
-        }
-    </tbody>
-</table>
+<Lessons Day=@Day/>
 
 @code {
 
@@ -34,6 +11,6 @@
 
     private void GetScheduleDay(string selectedDay)
     {
-        Day = ScheduleService.GetTimeTableDay(selectedDay);
+        Day = ScheduleService.GetScheduleDay(selectedDay);
     }
 }

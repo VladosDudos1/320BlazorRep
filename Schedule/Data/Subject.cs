@@ -12,5 +12,8 @@ namespace Schedule.Data
         public string Name { get; set; }
         public string Teacher { get; set; }
         public int Classroom { get; set; }
+
+        [BsonIgnore]
+        public bool IsEditing { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿@inject Services.ScheduleService ScheduleService 
 <div class="container-fluid">
     <div>
-        <select @bind="@day" @onselectionchange="@(() => OnClickCallback.InvokeAsync(day))">
+        <select @bind="@day" @onclick="@(() => OnClickCallback.InvokeAsync(day))">
             @foreach (var i in ScheduleService.GetDays())
             {
                 <option>@i</option>

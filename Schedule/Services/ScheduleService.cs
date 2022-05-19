@@ -1,9 +1,8 @@
-﻿using System;
+﻿using MongoDB.Driver;
+using Schedule.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using MongoDB.Driver;
-using Schedule.Data;
 
 namespace Schedule.Services
 {
@@ -23,20 +22,33 @@ namespace Schedule.Services
             return Enumerable.Range(0, 7).Select(i => ((DayOfWeek)i).ToString()).ToList();
         }
 
-        public void SaveTimeTableDay(ScheduleDay day)
+        public void SaveScheduleDay(ScheduleDay day)
         {
-            var timeTable = (MongoCollectionBase<ScheduleDay>)database.GetCollection<ScheduleDay>("Schedule");
+            var schedule = (MongoCollectionBase<ScheduleDay>)database.GetCollection<ScheduleDay>("Schedule");
             if (GetSchedule().FirstOrDefault(x => x.Id == day.Id) != null)
             {
                 var filter = Builders<ScheduleDay>.Filter.Eq(s => s.Id, day.Id);
-                timeTable.ReplaceOneAsync(filter, day);
+                schedule.ReplaceOneAsync(filter, day);
             }
             else
-                timeTable.InsertOneAsync(day);
+                schedule.InsertOneAsync(day);
         }
-        public ScheduleDay GetTimeTableDay(string day)
+
+        public void DeleteSubject(ScheduleDay day, Subject subject)
+        {
+            day.Subjects.Remove(subject);
+            SaveScheduleDay(day);
+        }
+
+        public ScheduleDay GetScheduleDay(string day)
         {
             return GetSchedule().FirstOrDefault(x => x.DayName == day);
+        }
+
+        public void AddNewSubject(ScheduleDay day)
+        {
+            day.Subjects.Add(new Subject());
+            SaveScheduleDay(day);
         }
     }
 }
