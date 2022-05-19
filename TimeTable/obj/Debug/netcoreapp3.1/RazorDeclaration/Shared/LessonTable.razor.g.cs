@@ -83,10 +83,20 @@ using TimeTable;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Shared\LessonTable.razor"
+#line 26 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Shared\LessonTable.razor"
        
     [Parameter]
     public string Day { get; set; } = "Monday";
+    public TimeTableDay TableDay => DataAccess.GetTimeTableDay(Day);
+
+    public void DeleteSubject(Subject subject)
+    {
+        var t = DataAccess.GetTimeTableDay(Day);
+        t.Subjects.Remove(subject);
+        //DataAccess.GetTimeTableDay(Day).Subjects.Remove(subject);
+        DataAccess.SaveTimeTableDay(t);
+        //DataAccess.DeleteSubject(DataAccess.GetTimeTableDay(Day), subject);
+    }
 
 
 #line default

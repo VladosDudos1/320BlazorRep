@@ -34,6 +34,12 @@ namespace TimeTable
         {
             return GetTimeTable().FirstOrDefault(x => x.DayName == day);
         }
+        public static void DeleteSubject(TimeTableDay day, Subject subject)
+        {
+            day.Subjects.Remove(subject);
+
+            SaveTimeTableDay(day);
+        }
 
     }
 }

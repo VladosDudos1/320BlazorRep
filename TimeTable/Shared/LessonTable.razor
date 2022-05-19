@@ -6,14 +6,18 @@
         <tr>
             <td>Subject</td>
             <td>Teacher</td>
+            <td></td>
         </tr>
     </thead>
-@foreach (var subject in DataAccess.GetTimeTableDay(Day).Subjects)
+@for(int i = 0; i < TableDay.Subjects.Count(); i++)
 {
+    var subject = TableDay.Subjects[i];
     <tr>
         <td>@subject.Name</td>
         <td>@subject.Teacher</td>
-    
+        <td>
+            <button class="btn btn-danger" @onclick="()=>DeleteSubject(subject)">Delete</button>
+        </td>
     </tr>
 }
 
@@ -22,5 +26,15 @@
 @code {
     [Parameter]
     public string Day { get; set; } = "Monday";
+    public TimeTableDay TableDay = DataAccess.GetTimeTableDay(Day);
+
+    public void DeleteSubject(Subject subject)
+    {
+        var t = DataAccess.GetTimeTableDay(Day);
+        t.Subjects.Remove(subject);
+        //DataAccess.GetTimeTableDay(Day).Subjects.Remove(subject);
+        DataAccess.SaveTimeTableDay(t);
+        //DataAccess.DeleteSubject(DataAccess.GetTimeTableDay(Day), subject);
+    }
 
 }
