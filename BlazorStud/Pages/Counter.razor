@@ -1,0 +1,26 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<button style="margin-left: 500px" class="btn btn-primary" @onclick="IncrementCount">Click me1</button>
+<br />
+<input style="margin-left:500px" @bind-value="value1" />
+<br />
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+
+
+@code {
+    private int currentCount = 0;
+    public int value1 { get; set; }
+    private void IncrementCount()
+    {
+        currentCount=currentCount+value1;
+        Game.UpdateOne();
+    }
+
+ 
+}

@@ -1,0 +1,30 @@
+﻿<div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>ReleaseDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Games == null)
+            {
+                <tr>LOADING....</tr>
+            }
+            else if (Games.Count == 0)
+            {
+                <tr>nothing </tr>
+            }
+            else
+            {
+                <SingleGame Games="Games" IsTable="false" />
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    [Parameter] public List<Game> Games { get; set; }
+    
+}

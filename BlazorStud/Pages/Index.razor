@@ -1,0 +1,53 @@
+﻿@page "/"
+@inject IJSRuntime qq
+@inject NavigationManager ss
+<div class="row">
+    <div class="col text-center">
+        <h1>Welcome!</h1>
+    </div>
+</div>
+
+<button class="btn btn-primary" @onclick="ToMain">save</button>
+<button class="btn btn-primary" @onclick="LocalStorageLoad">load</button>
+
+
+<div class="row">
+    <div class="col text-center">
+        <h2>show all games</h2>
+    </div>
+</div>
+
+<GameListTable Games="games" />
+@*<SingleGame Game="games[0]" />*@
+
+@code{
+    public int Number { get; set; }
+    public string str1 { get; set; }
+    List<Game> games { get; set; }
+    LocalStorageService storage;
+
+    protected void ToMain()
+    {
+        ss.NavigateTo("/counter");
+    }
+
+    protected override void OnInitialized()
+    {
+        storage = new LocalStorageService(qq);
+    }
+
+    public async void LocalStorageSave()
+    {
+        await storage.SetStringAsync("number", "200");
+    }
+
+    public async void LocalStorageLoad()
+    {
+        str1 = await storage.GetStringAsync("number");
+        StateHasChanged();
+
+
+    }
+
+
+}
