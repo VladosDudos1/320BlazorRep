@@ -12,5 +12,10 @@ namespace Schedule.Data
         public ObjectId Id { get => _id; }
         public string DayName { get; set; }
         public List<Subject> Subjects { get; set; }
+
+        public ScheduleDay()
+        {
+            Subjects = new List<Subject>();
+        }
     }
 }

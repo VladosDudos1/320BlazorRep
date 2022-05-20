@@ -12,5 +12,11 @@
     private void GetScheduleDay(string selectedDay)
     {
         Day = ScheduleService.GetScheduleDay(selectedDay);
+
+        if (Day == null)
+            Day = new ScheduleDay
+            {
+                DayName = selectedDay
+            };
     }
 }

@@ -48,7 +48,6 @@ C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\runtimes\
 C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
 C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\LessonTable.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\Schedule.deps.json
 C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\Schedule.runtimeconfig.json
 C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\Schedule.runtimeconfig.dev.json
@@ -135,7 +134,6 @@ C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\App
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\Counter.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\Error.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\Index.razor.g.cs
-C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\LessonTable.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\NavMenu.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\_Imports.razor.g.cs
