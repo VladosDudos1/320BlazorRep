@@ -9,9 +9,8 @@
             <td></td>
         </tr>
     </thead>
-@for(int i = 0; i < TableDay.Subjects.Count(); i++)
+@foreach(var subject in DataAccess.GetTimeTableDay(Day).Subjects)
 {
-    var subject = TableDay.Subjects[i];
     <tr>
         <td>@subject.Name</td>
         <td>@subject.Teacher</td>
@@ -26,14 +25,13 @@
 @code {
     [Parameter]
     public string Day { get; set; } = "Monday";
-    public TimeTableDay TableDay = DataAccess.GetTimeTableDay(Day);
 
     public void DeleteSubject(Subject subject)
     {
         var t = DataAccess.GetTimeTableDay(Day);
         t.Subjects.Remove(subject);
         //DataAccess.GetTimeTableDay(Day).Subjects.Remove(subject);
-        DataAccess.SaveTimeTableDay(t);
+        //DataAccess.SaveTimeTableDay(t);
         //DataAccess.DeleteSubject(DataAccess.GetTimeTableDay(Day), subject);
     }
 

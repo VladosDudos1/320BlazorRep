@@ -13,63 +13,63 @@ namespace TimeTable.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\_Imports.razor"
+#line 1 "D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\_Imports.razor"
+#line 2 "D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\_Imports.razor"
+#line 3 "D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\_Imports.razor"
+#line 4 "D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\_Imports.razor"
+#line 5 "D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\_Imports.razor"
+#line 6 "D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\_Imports.razor"
+#line 7 "D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\_Imports.razor"
+#line 9 "D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\_Imports.razor"
 using TimeTable.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Shared\LessonTable.razor"
+#line 1 "D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\Shared\LessonTable.razor"
 using TimeTable;
 
 #line default
@@ -83,18 +83,17 @@ using TimeTable;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 26 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Shared\LessonTable.razor"
+#line 25 "D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\Shared\LessonTable.razor"
        
     [Parameter]
     public string Day { get; set; } = "Monday";
-    public TimeTableDay TableDay => DataAccess.GetTimeTableDay(Day);
 
     public void DeleteSubject(Subject subject)
     {
         var t = DataAccess.GetTimeTableDay(Day);
         t.Subjects.Remove(subject);
         //DataAccess.GetTimeTableDay(Day).Subjects.Remove(subject);
-        DataAccess.SaveTimeTableDay(t);
+        //DataAccess.SaveTimeTableDay(t);
         //DataAccess.DeleteSubject(DataAccess.GetTimeTableDay(Day), subject);
     }
 
