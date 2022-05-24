@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\gutuf\\Source\\Repos\\320BlazorRep2\\TimeTable\\TimeTable.csproj": {}
+    "C:\\Users\\201913\\Source\\Repos\\320BlazorRep\\TimeTable\\TimeTable.csproj": {}
   },
   "projects": {
-    "D:\\Users\\gutuf\\Source\\Repos\\320BlazorRep2\\TimeTable\\TimeTable.csproj": {
+    "C:\\Users\\201913\\Source\\Repos\\320BlazorRep\\TimeTable\\TimeTable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\gutuf\\Source\\Repos\\320BlazorRep2\\TimeTable\\TimeTable.csproj",
+        "projectUniqueName": "C:\\Users\\201913\\Source\\Repos\\320BlazorRep\\TimeTable\\TimeTable.csproj",
         "projectName": "TimeTable",
-        "projectPath": "D:\\Users\\gutuf\\Source\\Repos\\320BlazorRep2\\TimeTable\\TimeTable.csproj",
-        "packagesPath": "C:\\Users\\gutuf\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\gutuf\\Source\\Repos\\320BlazorRep2\\TimeTable\\obj\\",
+        "projectPath": "C:\\Users\\201913\\Source\\Repos\\320BlazorRep\\TimeTable\\TimeTable.csproj",
+        "packagesPath": "C:\\Users\\201913\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\201913\\Source\\Repos\\320BlazorRep\\TimeTable\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\gutuf\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "\\\\nas36d451\\user-domain$\\stud\\201913\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -59,6 +63,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -67,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
