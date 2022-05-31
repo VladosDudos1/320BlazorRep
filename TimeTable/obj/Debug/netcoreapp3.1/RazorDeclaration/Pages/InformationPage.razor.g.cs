@@ -75,6 +75,13 @@ using TimeTable.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Pages\InformationPage.razor"
+using TimeTable.Services;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/information")]
     public partial class InformationPage : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -83,6 +90,53 @@ using TimeTable.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 11 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Pages\InformationPage.razor"
+       
+    public string InfoName { get; set; } = "Name";
+    private string _name  { get; set; }
+    public string Name
+    {
+        get => _name;
+        set
+        {
+            _name = value;
+            LocalStorageSave();
+        }
+    }
+
+
+    LocalStorageService storage;
+
+    protected override void OnInitialized()
+    {
+        storage = new LocalStorageService(Reader);
+        LocalStorageLoad();
+    }
+
+    public async void LocalStorageSave()
+    {
+        await storage.SetStringAsync(InfoName, Name);
+
+    }
+
+    public async void LocalStorageLoad()
+    {
+        try
+        {
+            Name = await storage.GetStringAsync(InfoName);
+            StateHasChanged();
+        }
+        catch
+        {
+
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime Reader { get; set; }
     }
 }
 #pragma warning restore 1591

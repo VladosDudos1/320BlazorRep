@@ -84,7 +84,7 @@ using TimeTable.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Pages\TimeTablePage.razor"
+#line 17 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Pages\TimeTablePage.razor"
        
     string selectedDay = "Monday";
 

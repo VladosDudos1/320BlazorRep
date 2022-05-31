@@ -1,17 +1,51 @@
 ﻿@page "/information"
 
+@using TimeTable.Services
+@inject IJSRuntime Reader
+
 <h3>InformationPage</h3>
 <p>Name</p>
-<input type="text" />
-<p>Mail</p>
-<input type="text" />
-<p>City</p>
-<input type="text" />
-<p>Name</p>
-<input type="text" />
-<p>Name</p>
-<input type="text" />
+<input type="text" @bind="@Name" />
+
 
 @code {
+    public string InfoName { get; set; } = "Name";
+    private string _name  { get; set; }
+    public string Name
+    {
+        get => _name;
+        set
+        {
+            _name = value;
+            LocalStorageSave();
+        }
+    }
 
+
+    LocalStorageService storage;
+
+    protected override void OnInitialized()
+    {
+        storage = new LocalStorageService(Reader);
+        LocalStorageLoad();
+    }
+
+    public async void LocalStorageSave()
+    {
+        await storage.SetStringAsync(InfoName, Name);
+
+    }
+
+    public async void LocalStorageLoad()
+    {
+        try
+        {
+            Name = await storage.GetStringAsync(InfoName);
+            StateHasChanged();
+        }
+        catch
+        {
+
+        }
+    }
 }
