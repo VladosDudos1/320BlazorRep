@@ -23,6 +23,7 @@ namespace Schedule
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<ScheduleService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,8 +36,10 @@ namespace Schedule
             else
             {
                 app.UseExceptionHandler("/Error");
+                app.UseHsts();
             }
 
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();

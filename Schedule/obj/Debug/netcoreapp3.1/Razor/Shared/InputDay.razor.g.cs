@@ -115,15 +115,13 @@ using Schedule.Shared;
             __builder.AddContent(10, "                ");
             __builder.OpenElement(11, "option");
             __builder.AddAttribute(12, "class", "dropdown-item");
-            __builder.AddContent(13, 
 #nullable restore
 #line 7 "C:\Users\201906\source\repos\Schedule\Schedule\Shared\InputDay.razor"
-                                               i
+__builder.AddContent(13, i);
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.CloseElement();
             __builder.AddMarkupContent(14, "\r\n");
 #nullable restore

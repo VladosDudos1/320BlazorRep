@@ -92,15 +92,13 @@ using Schedule.Shared;
             __builder.OpenElement(10, "div");
             __builder.AddAttribute(11, "class", "content px-4");
             __builder.AddMarkupContent(12, "\r\n        ");
-            __builder.AddContent(13, 
 #nullable restore
 #line 13 "C:\Users\201906\source\repos\Schedule\Schedule\Shared\MainLayout.razor"
-         Body
+__builder.AddContent(13, Body);
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.AddMarkupContent(14, "\r\n    ");
             __builder.CloseElement();
             __builder.AddMarkupContent(15, "\r\n");

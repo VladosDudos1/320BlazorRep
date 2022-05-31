@@ -86,7 +86,7 @@ using Schedule.Data;
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
             __builder.OpenComponent<Schedule.Shared.InputDay>(0);
-            __builder.AddAttribute(1, "OnClickCallback", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, 
+            __builder.AddAttribute(1, "OnClickCallback", global::Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<System.String>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<System.String>(this, 
 #nullable restore
 #line 5 "C:\Users\201906\source\repos\Schedule\Schedule\Pages\SchedulePage.razor"
                             GetScheduleDay
@@ -98,7 +98,7 @@ using Schedule.Data;
             __builder.CloseComponent();
             __builder.AddMarkupContent(2, "\r\n");
             __builder.OpenComponent<Schedule.Shared.Lessons>(3);
-            __builder.AddAttribute(4, "Day", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Schedule.Data.ScheduleDay>(
+            __builder.AddAttribute(4, "Day", global::Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Schedule.Data.ScheduleDay>(
 #nullable restore
 #line 6 "C:\Users\201906\source\repos\Schedule\Schedule\Pages\SchedulePage.razor"
               Day

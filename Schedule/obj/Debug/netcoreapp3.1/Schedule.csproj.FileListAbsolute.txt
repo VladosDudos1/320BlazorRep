@@ -1,10 +1,7 @@
 C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\201906\source\repos\Schedule\Schedule\bin\Debug\netcoreapp3.1\Schedule.exe
-C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Schedule.csprojAssemblyReference.cache
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\staticwebassets\Schedule.StaticWebAssets.Manifest.cache
-C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\staticwebassets\Schedule.StaticWebAssets.xml
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Schedule.RazorComponent.input.cache
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\App.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Counter.razor.g.cs
@@ -146,3 +143,12 @@ C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDecl
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\InputDay.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\Lessons.razor.g.cs
 C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\Lessons.razor.g.cs
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Questions.razor.g.cs
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\Question.razor.g.cs
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\Questions.razor.g.cs
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\Question.razor.g.cs
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Schedule.csproj.AssemblyReference.cache
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Schedule.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Schedule.csproj.CoreCompileInputs.cache
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Schedule.RazorComponent.output.cache
+C:\Users\201906\source\repos\Schedule\Schedule\obj\Debug\netcoreapp3.1\Schedule.genruntimeconfig.cache
