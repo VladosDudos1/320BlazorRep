@@ -83,7 +83,7 @@ using Raspisaniye.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\chudo\source\repos\Raspisaniye\Raspisaniye\Shared\NavMenu.razor"
+#line 33 "C:\Users\chudo\source\repos\Raspisaniye\Raspisaniye\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

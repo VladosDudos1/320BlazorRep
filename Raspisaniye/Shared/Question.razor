@@ -1,0 +1,55 @@
+﻿@using Raspisaniye.Services
+@inject IJSRuntime Reader
+
+<div class="border p-5">
+    <h3>@QuestionHeader</h3>
+    <p>@QuestionBody</p>
+    <input type="text" class="form-control" placeholder="Answer" @bind="@Answer"/>
+</div>
+
+@code {
+    [Parameter]
+    public string QuestionHeader { get; set; }
+
+    [Parameter]
+    public string QuestionBody { get; set; }
+
+    private string _answer;
+
+    private string Answer
+    {
+        get => _answer;
+        set
+        {
+            _answer = value;
+            LocalStorageSave();
+        }
+    }
+
+    LocalStorageService storage;
+
+    protected override void OnInitialized()
+    {
+        storage = new LocalStorageService(Reader);
+        LocalStorageLoad();
+    }
+
+    public async void LocalStorageSave()
+    {
+        await storage.SetStringAsync(QuestionHeader, Answer);
+
+    }
+
+    public async void LocalStorageLoad()
+    {
+        try
+        {
+            _answer = await storage.GetStringAsync(QuestionHeader);
+            StateHasChanged();
+        }
+        catch
+        {
+
+        }
+    }
+}
