@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorProject.Shared
+namespace BlazorProject.Pages
 {
     #line hidden
     using System;
@@ -76,37 +76,35 @@ using BlazorProject;
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\_Imports.razor"
+#line 1 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\LocalPages.razor"
+using BlazorProject.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\LocalPages.razor"
 using BlazorProject.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\InputDay.razor"
-using BlazorProject.Data;
+#line 3 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\LocalPages.razor"
+using BlazorProject.Service;
 
 #line default
 #line hidden
 #nullable disable
-    public partial class InputDay : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/localpages")]
+    public partial class LocalPages : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 16 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\InputDay.razor"
-       
-    private string day;
-
-    [Parameter]
-    public EventCallback<string> OnClickCallback { get; set; }
-
-#line default
-#line hidden
-#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime runtimeObject { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private TimetableService TimetableService { get; set; }
     }
 }

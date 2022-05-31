@@ -1,0 +1,45 @@
+﻿@using BlazorProject.Data
+@using BlazorProject.Service
+@inject TimetableService TimetableService
+@inject IJSRuntime runtimeObject
+
+<div>
+    <p>@DesciprionInput</p>
+    <input type="text" class="form-control" @bind="@InputValue" /><br />
+</div>
+
+@code {
+    [Parameter]
+    public string DesciprionInput { get; set; }
+
+    private string _inputValue;
+
+    private string InputValue
+    {
+        get => _inputValue;
+        set
+        {
+            _inputValue = value;
+            LocalStorageSave();
+        }
+    }
+
+    LocalStorageService storage;
+
+    protected override void OnInitialized()
+    {
+        storage = new LocalStorageService(runtimeObject);
+        LocalStorageLoad();
+    }
+
+    public async void LocalStorageSave()
+    {
+        await storage.SetStringAsync(DesciprionInput, InputValue);
+    }
+
+    public async void LocalStorageLoad()
+    {
+        _inputValue = await storage.GetStringAsync(DesciprionInput);
+        StateHasChanged();
+    }
+}

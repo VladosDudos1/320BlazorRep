@@ -50,5 +50,27 @@ namespace BlazorProject.Data
             else
                 return null;
         }
+
+        public static void AddItem(Timetable item, string day)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Timetable");
+            var collection = database.GetCollection<Timetable>(day);
+            if (database.ListCollectionNames().ToList().Exists(x => x == day))
+            {
+                collection.InsertOne(item);
+            }
+        }
+
+        public static void RemoveItem(Timetable item, string day)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Timetable");
+            var collection = database.GetCollection<Timetable>(day);
+            if (database.ListCollectionNames().ToList().Exists(x => x == day))
+            {
+                collection.DeleteOne(a => a.Id == item.Id);
+            }
+        }
     }
 }

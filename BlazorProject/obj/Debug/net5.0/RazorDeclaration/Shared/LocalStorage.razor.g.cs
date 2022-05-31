@@ -83,13 +83,20 @@ using BlazorProject.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\InputDay.razor"
+#line 1 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\LocalStorage.razor"
 using BlazorProject.Data;
 
 #line default
 #line hidden
 #nullable disable
-    public partial class InputDay : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\LocalStorage.razor"
+using BlazorProject.Service;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class LocalStorage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,16 +104,46 @@ using BlazorProject.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 16 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\InputDay.razor"
+#line 11 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\LocalStorage.razor"
        
-    private string day;
-
     [Parameter]
-    public EventCallback<string> OnClickCallback { get; set; }
+    public string DesciprionInput { get; set; }
+
+    private string _inputValue;
+
+    private string InputValue
+    {
+        get => _inputValue;
+        set
+        {
+            _inputValue = value;
+            LocalStorageSave();
+        }
+    }
+
+    LocalStorageService storage;
+
+    protected override void OnInitialized()
+    {
+        storage = new LocalStorageService(runtimeObject);
+        LocalStorageLoad();
+    }
+
+    public async void LocalStorageSave()
+    {
+        await storage.SetStringAsync(DesciprionInput, InputValue);
+    }
+
+    public async void LocalStorageLoad()
+    {
+        _inputValue = await storage.GetStringAsync(DesciprionInput);
+        StateHasChanged();
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime runtimeObject { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private TimetableService TimetableService { get; set; }
     }
 }

@@ -80,3 +80,17 @@ C:\Users\nasur\source\repos\BlazorProject\BlazorProject\obj\Debug\net5.0\RazorDe
 C:\Users\nasur\source\repos\BlazorProject\BlazorProject\obj\Debug\net5.0\Razor\Pages\InputDay2.razor.g.cs
 C:\Users\nasur\source\repos\BlazorProject\BlazorProject\obj\Debug\net5.0\Razor\Shared\ListTimetable2.razor.g.cs
 C:\Users\nasur\source\repos\BlazorProject\BlazorProject\obj\Debug\net5.0\BlazorProject.csproj.AssemblyReference.cache
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\bin\Debug\net5.0\Blazored.LocalStorage.dll
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\bin\Debug\net5.0\Microsoft.AspNetCore.Components.dll
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\bin\Debug\net5.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\bin\Debug\net5.0\Microsoft.JSInterop.dll
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\bin\Debug\net5.0\System.IO.Pipelines.dll
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\bin\Debug\net5.0\MongoDB.Driver.GridFS.dll
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\obj\Debug\net5.0\RazorDeclaration\Pages\LocalPages.razor.g.cs
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\obj\Debug\net5.0\RazorDeclaration\Shared\LocalStorage.razor.g.cs
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\obj\Debug\net5.0\Razor\Pages\LocalPages.razor.g.cs
+C:\Users\nasur\source\repos\BlazorProject\BlazorProject\obj\Debug\net5.0\Razor\Shared\LocalStorage.razor.g.cs

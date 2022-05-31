@@ -89,6 +89,13 @@ using BlazorProject.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
+using BlazorProject.Service;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/listtimetable")]
     public partial class ListTimetable : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,18 +105,72 @@ using BlazorProject.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
+#line 82 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Pages\ListTimetable.razor"
        
+    private long maxFileSize = 500000;
+    private int maxAllowedFiles = 3;
+    private bool isLoading;
+    protected byte[] img;
+    private List<IBrowserFile> loadedFiles = new();
+    [Inject] GridFSService service { get; set; }
+
+    LocalStorageService storage;
+
+    private Timetable sub = new Timetable();
+    public string selectedDay { get; set; }
     private List<Timetable> timetable = new List<Timetable>();
 
     private async void GetTimetableInDay(string day)
     {
+        selectedDay = day;
         timetable = await TimetableService.GetItemAsync(day);
+    }
+
+    public async void DeleteSubject(Timetable subject)
+    {
+        TimetableService.RemoveItem(subject, selectedDay);
+        timetable = await TimetableService.GetItemAsync(selectedDay);
+    }
+
+    public async void AddSubject()
+    {
+        TimetableService.AddItem(sub, selectedDay);
+        timetable = await TimetableService.GetItemAsync(selectedDay);
+    }
+
+    private async Task LoadFiles(InputFileChangeEventArgs e)
+    {
+        isLoading = true;
+        loadedFiles.Clear();
+
+        foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
+        {
+            try
+            {
+                loadedFiles.Add(file);
+
+                //var trustedFileNameForFileStorage = Path.GetRandomFileName();
+                var stream = file.OpenReadStream(maxFileSize);
+
+                //img = new byte[stream.Length];
+                //await stream.ReadAsync(img);
+                await service.UploadImageToDBAsync(stream);
+                isLoading = false;
+                //ImgToDb.AddToDB(new ImgToDb("RandomName", img));
+            }
+
+            catch (Exception ex)
+            {
+                await runtimeObject.InvokeVoidAsync("logError", ex);
+            }
+        }
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime runtimeObject { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private TimetableService TimetableService { get; set; }
     }
 }
 #pragma warning restore 1591

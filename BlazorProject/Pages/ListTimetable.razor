@@ -1,13 +1,58 @@
 ﻿@using BlazorProject.Data
 @using BlazorProject.Shared
+@using BlazorProject.Service
 @page "/listtimetable"
+@inject TimetableService TimetableService
+@inject IJSRuntime runtimeObject
 <h2>Timetable</h2>
 
 <InputDay OnClickCallback="@GetTimetableInDay" />
+<br />
+Преподаватель
+<input type="text" @bind-value="@sub.NameTeacher" />
+<br />
+<br />
+Предмет
+<input type="text" @bind-value="@sub.Subject" />
+<br />
+<br />
+Аудитория
+<input type="text" @bind-value="@sub.Classroom" />
+<br />
+<br />
+
+<button @onclick="AddSubject">Add</button>
+
+<p>
+    <label>
+        Upload up to @maxAllowedFiles of up to @maxFileSize bytes:
+        <InputFile OnChange="@LoadFiles" multiple />
+    </label>
+</p>
+@if (isLoading)
+{
+    <p>Uploading...</p>
+}
+else
+{
+    <ul>
+        @foreach (var file in loadedFiles)
+        {
+            <li>
+                <ul>
+                    <li>Name: @file.Name</li>
+                    <li>Last modified: @file.LastModified.ToString()</li>
+                    <li>Size (bytes): @file.Size</li>
+                    <li>Content type: @file.ContentType</li>
+                </ul>
+            </li>
+        }
+    </ul>
+}
+
 <table class="table">
     <thead>
         <tr>
-            <th>Id</th>
             <th>Subject</th>
             <th>Teacher</th>
             <th>Classroom</th>
@@ -19,20 +64,78 @@
             @foreach (var table in timetable)
             {
                 <tr>
-                    <td>@table.Id</td>
                     <td>@table.Subject</td>
                     <td>@table.NameTeacher</td>
                     <td>@table.Classroom</td>
+                    <td>
+                        <button class="btn btn-danger" @onclick="() => DeleteSubject(table)">Delete</button>
+                    </td>
                 </tr>
             }
+        }
+        else
+        {
+            <p>Выберите день!</p>
         }
     </tbody>
 </table>
 @code {
+    private long maxFileSize = 500000;
+    private int maxAllowedFiles = 3;
+    private bool isLoading;
+    protected byte[] img;
+    private List<IBrowserFile> loadedFiles = new();
+    [Inject] GridFSService service { get; set; }
+
+    LocalStorageService storage;
+
+    private Timetable sub = new Timetable();
+    public string selectedDay { get; set; }
     private List<Timetable> timetable = new List<Timetable>();
 
     private async void GetTimetableInDay(string day)
     {
+        selectedDay = day;
         timetable = await TimetableService.GetItemAsync(day);
+    }
+
+    public async void DeleteSubject(Timetable subject)
+    {
+        TimetableService.RemoveItem(subject, selectedDay);
+        timetable = await TimetableService.GetItemAsync(selectedDay);
+    }
+
+    public async void AddSubject()
+    {
+        TimetableService.AddItem(sub, selectedDay);
+        timetable = await TimetableService.GetItemAsync(selectedDay);
+    }
+
+    private async Task LoadFiles(InputFileChangeEventArgs e)
+    {
+        isLoading = true;
+        loadedFiles.Clear();
+
+        foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
+        {
+            try
+            {
+                loadedFiles.Add(file);
+
+                //var trustedFileNameForFileStorage = Path.GetRandomFileName();
+                var stream = file.OpenReadStream(maxFileSize);
+
+                //img = new byte[stream.Length];
+                //await stream.ReadAsync(img);
+                await service.UploadImageToDBAsync(stream);
+                isLoading = false;
+                //ImgToDb.AddToDB(new ImgToDb("RandomName", img));
+            }
+
+            catch (Exception ex)
+            {
+                await runtimeObject.InvokeVoidAsync("logError", ex);
+            }
+        }
     }
 }

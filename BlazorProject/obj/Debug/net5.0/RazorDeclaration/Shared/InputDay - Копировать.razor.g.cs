@@ -97,7 +97,7 @@ using BlazorProject.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 17 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\InputDay - Копировать.razor"
+#line 16 "C:\Users\nasur\source\repos\BlazorProject\BlazorProject\Shared\InputDay - Копировать.razor"
        
     private string day;
 
@@ -107,6 +107,7 @@ using BlazorProject.Data;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private TimetableService TimetableService { get; set; }
     }
 }
 #pragma warning restore 1591

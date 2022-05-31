@@ -29,6 +29,7 @@ namespace BlazorProject
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<TimetableService>();
+            services.AddTransient<GridFSService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

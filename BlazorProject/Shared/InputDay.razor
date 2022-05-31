@@ -1,16 +1,15 @@
 ﻿@using BlazorProject.Data
-@*@inject TimetableService TimetabService*@
+@inject TimetableService TimetableService
 <div class="container-fluid"
     <div>
-        <select @bind="@day">
+        <select @bind="@day" @onclick="@(() => OnClickCallback.InvokeAsync(day))">
             <option selected="selected">  </option>
             @foreach (var i in TimetableService.GetDay().ToList())
             {
                 <option>@i</option>
             }
         </select>
-        @*<input type="text" @bind-value="@day"/>*@
-        <button @onclick="@(() => OnClickCallback.InvokeAsync(day))">Get</button>
+        @*<button @onclick="@(() => OnClickCallback.InvokeAsync(day))">Get</button>*@
     </div>
 </div>
 

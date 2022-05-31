@@ -1,0 +1,15 @@
+﻿@using BlazorProject.Data
+@using BlazorProject.Shared
+@using BlazorProject.Service
+@page "/localpages"
+@inject TimetableService TimetableService
+@inject IJSRuntime runtimeObject
+<h2>Registration</h2>
+
+<LocalStorage DesciprionInput="Name" />
+<LocalStorage DesciprionInput="Surname" />
+<LocalStorage DesciprionInput="Login" />
+<LocalStorage DesciprionInput="Password" />
+@code {
+
+}
