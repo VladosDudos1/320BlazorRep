@@ -150,13 +150,13 @@ C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Schedule.
 C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Schedule.dll
 C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Schedule.pdb
 C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Schedule.genruntimeconfig.cache
-C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Questions.razor.g.cs
 C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\SchedulePage.razor.g.cs
 C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\InputDay.razor.g.cs
 C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\Lessons.razor.g.cs
-C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\Questions.razor.g.cs
 C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\SchedulePage.razor.g.cs
 C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\InputDay.razor.g.cs
 C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\Lessons.razor.g.cs
-C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\QuestionsAnswers.razor.g.cs
-C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\QuestionsAnswers.razor.g.cs
+C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\QuestionsAnswers.razor.g.cs
+C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\Answers.razor.g.cs
+C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Razor\Pages\QuestionsAnswers.razor.g.cs
+C:\Users\danil\Source\Repos\320Blazer\Schedule\obj\Debug\netcoreapp3.1\Razor\Shared\Answers.razor.g.cs
