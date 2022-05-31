@@ -236,3 +236,5 @@ D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\obj\Debug\netcoreapp3.1\Time
 D:\Users\gutuf\Source\Repos\320BlazorRep2\TimeTable\obj\Debug\netcoreapp3.1\TimeTable.genruntimeconfig.cache
 C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\InformationPage.razor.g.cs
 C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\obj\Debug\netcoreapp3.1\Razor\Pages\InformationPage.razor.g.cs
+C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\InfoElement.razor.g.cs
+C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\obj\Debug\netcoreapp3.1\Razor\Shared\InfoElement.razor.g.cs

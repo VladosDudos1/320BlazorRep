@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace TimeTable.Pages
+namespace TimeTable.Shared
 {
     #line hidden
     using System;
@@ -76,20 +76,66 @@ using TimeTable.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Pages\InformationPage.razor"
+#line 1 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Shared\InfoElement.razor"
 using TimeTable.Services;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/information")]
-    public partial class InformationPage : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class InfoElement : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 10 "C:\Users\201913\Source\Repos\320BlazorRep\TimeTable\Shared\InfoElement.razor"
+       
+    [Parameter]
+    public string InfoName { get; set; }
+    private string _name { get; set; }
+    public string Name
+    {
+        get => _name;
+        set
+        {
+            _name = value;
+            LocalStorageSave();
+        }
+    }
+
+
+    LocalStorageService storage;
+
+    protected override void OnInitialized()
+    {
+        storage = new LocalStorageService(Reader);
+        LocalStorageLoad();
+    }
+
+    public async void LocalStorageSave()
+    {
+        await storage.SetStringAsync(InfoName, Name);
+
+    }
+
+    public async void LocalStorageLoad()
+    {
+        try
+        {
+            Name = await storage.GetStringAsync(InfoName);
+            StateHasChanged();
+        }
+        catch
+        {
+
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime Reader { get; set; }
     }
 }
