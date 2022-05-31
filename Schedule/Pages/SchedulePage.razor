@@ -1,0 +1,22 @@
+﻿@page "/schedule"
+@using Schedule.Data;
+@inject Services.ScheduleService ScheduleService
+
+<InputDay OnClickCallback="@GetScheduleDay"/>
+<Lessons Day=@Day/>
+
+@code {
+
+    private ScheduleDay Day;
+
+    private void GetScheduleDay(string selectedDay)
+    {
+        Day = ScheduleService.GetScheduleDay(selectedDay);
+
+        if (Day == null)
+            Day = new ScheduleDay
+            {
+                DayName = selectedDay
+            };
+    }
+}
