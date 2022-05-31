@@ -1,0 +1,22 @@
+﻿@page "/schedule"
+@using Tukhvatullina.Data;
+@inject Services.TukhvatullinaService TukhvatullinaService
+
+<InputDay OnClickCallback="@GetTukhvatullinaDay"/>
+<Lessons Day=@Day/>
+
+@code {
+
+    private TukhvatullinaDay Day;
+
+    private void GetTukhvatullinaDay(string selectedDay)
+    {
+        Day = TukhvatullinaService.GetTukhvatullinaDay(selectedDay);
+
+        if (Day == null)
+            Day = new TukhvatullinaDay
+            {
+                DayName = selectedDay
+            };
+    }
+}

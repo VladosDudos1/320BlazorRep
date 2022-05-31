@@ -1,0 +1,18 @@
+﻿@inject Services.TukhvatullinaService TukhvatullinaService 
+<div class="container-fluid">
+    <div>
+        <select @bind="@day" @onclick="@(() => OnClickCallback.InvokeAsync(day))">
+            @foreach (var i in TukhvatullinaService.GetDays())
+            {
+                <option class="dropdown-item">@i</option>
+            }
+        </select>
+    </div>
+</div>
+
+@code {
+    private string day;
+
+    [Parameter]
+    public EventCallback<string> OnClickCallback { get; set; }
+}
