@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4MeK6ECctLAA81eGh5g0DTuFwXv4GvVUvP1734thPZYoIKMIJe0lf0Ne8Act/EqANEZHsxP4sajvv6aFfnfYrg==",
+  "dgSpecHash": "CCk0ggomveB8sPx//+0/nCDz7Fd9URAOkouSXOkQydtUYlh7pvSlNrO5+yU3j4/dNe9C5fjZAuLfiNys0H2Z3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danil\\Source\\Repos\\320Blazor\\Schedule\\Schedule.csproj",
+  "projectFilePath": "C:\\Users\\danil\\Source\\Repos\\320Blazer\\Schedule\\Schedule.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danil\\.nuget\\packages\\dnsclient\\1.6.0\\dnsclient.1.6.0.nupkg.sha512",
     "C:\\Users\\danil\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",

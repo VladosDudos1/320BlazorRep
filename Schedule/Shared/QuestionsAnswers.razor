@@ -1,0 +1,55 @@
+﻿@using Schedule.Services
+@inject IJSRuntime Reader
+
+<div class="border p-5">
+    <h3>@Header</h3>
+    <p>@Body</p>
+    <input type="text" class="form-control" @bind="@Answer"/>
+</div>
+
+@code {
+    [Parameter]
+    public string Header { get; set; }
+
+    [Parameter]
+    public string Body { get; set; }
+
+    private string _answer;
+
+    private string Answer
+    {
+        get => _answer;
+        set
+        {
+            _answer = value;
+            LocalStorageSave();
+        }
+    }
+
+    LocalStorageService storage;
+
+    protected override void OnInitialized()
+    {
+        storage = new LocalStorageService(Reader);
+        LocalStorageLoad();
+    }
+
+    public async void LocalStorageSave()
+    {
+        await storage.SetStringAsync(Header, Answer);
+
+    }
+
+    public async void LocalStorageLoad()
+    {
+        try
+        {
+            _answer = await storage.GetStringAsync(Header);
+            StateHasChanged();
+        }
+        catch
+        {
+
+        }
+    }
+}

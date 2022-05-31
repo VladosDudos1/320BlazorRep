@@ -1,0 +1,97 @@
+﻿@using Schedule.Services
+@inject ScheduleService ScheduleService
+
+<h3>LessonTable</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lesson number</th>
+            <th>Classroom</th>
+            <th>Name</th>
+            <th>Teacher</th>
+            <th>Buttons</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Day != null)
+        {
+            @for (int i = 0; i < Day.Subjects.Count(); i++)
+            {
+                var subject = Day.Subjects[i];
+                if (subject.IsEditing)
+                {
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Classroom" @bind="@subject.Classroom" />
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Subject Name" @bind="@subject.Name" />
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Teacher" @bind="@subject.Teacher" />
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" @onclick="() => EnableEditing(false, subject)">
+                                Cancel
+                            </button>
+                            <button type="button" class="btn btn-success" @onclick="() => UpdateSubject(subject)">
+                                Save
+                            </button>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td>@subject.Classroom</td>
+                        <td>@subject.Name</td>
+                        <td>@subject.Teacher</td>
+                        <td>
+                            <button type="button" class="btn btn-info" @onclick="() => EnableEditing(true, subject)">
+                                Edit
+                            </button>
+                            <button type="button" class="btn btn-danger" @onclick="() => DeleteSubject(subject)">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-info" @onclick="() => AddNewRow()">
+    New subject
+</button>
+
+@code {
+
+    [Parameter]
+    public TimeTableDay Day { get; set; }
+
+    private void EnableEditing(bool flag, Subject subject)
+    {
+        subject.IsEditing = flag;
+    }
+
+    private void UpdateSubject(Subject subject)
+    {
+        EnableEditing(false, subject);
+
+        ScheduleService.SaveScheduleDay(Day);
+    }
+
+    private void DeleteSubject(Subject subject) => ScheduleService.DeleteSubject(Day, subject);
+
+    private void AddNewRow()
+    {
+        if (Day == null)
+            return;
+        var subject = ScheduleService.AddNewSubject(Day);
+        EnableEditing(true, subject);
+    }
+}

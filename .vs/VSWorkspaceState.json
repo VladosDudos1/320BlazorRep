@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Schedule",
+    "\\Schedule\\Pages"
   ],
-  "SelectedNode": "\\Schedule.sln",
   "PreviewInSolutionExplorer": false
 }

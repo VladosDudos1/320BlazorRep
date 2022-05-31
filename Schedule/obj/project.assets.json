@@ -631,11 +631,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danil\\Source\\Repos\\320Blazor\\Schedule\\Schedule.csproj",
+      "projectUniqueName": "C:\\Users\\danil\\Source\\Repos\\320Blazer\\Schedule\\Schedule.csproj",
       "projectName": "Schedule",
-      "projectPath": "C:\\Users\\danil\\Source\\Repos\\320Blazor\\Schedule\\Schedule.csproj",
+      "projectPath": "C:\\Users\\danil\\Source\\Repos\\320Blazer\\Schedule\\Schedule.csproj",
       "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danil\\Source\\Repos\\320Blazor\\Schedule\\obj\\",
+      "outputPath": "C:\\Users\\danil\\Source\\Repos\\320Blazer\\Schedule\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -695,7 +695,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
